@@ -1,4 +1,5 @@
 var dotenv = require("dotenv").config();
+var moment = require("moment");
 var axios = require("axios");
 var Spotify = require("node-spotify-api");
 var keys = require("./keys.js");
@@ -34,8 +35,8 @@ function commandReader() {
                         console.log("\n");
                         console.log(media + " is playing at the: ")
                         console.log("Venue: " + concerts[i].venue.name);
-                        console.log("in: " + concerts[i].venue.city + ", " + concerts[i].venue.region + ", " + concerts[i].venue.country);
-                        console.log("at: " + concerts[i].datetime);
+                        console.log("Location: " + concerts[i].venue.city + ", " + concerts[i].venue.country);
+                        console.log("Date: " + moment(concerts[i].datetime).format("MM/DD/YYYY"));
                         console.log("-------------------------------");
 
                         //add moment js 
