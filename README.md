@@ -36,7 +36,7 @@
 
 
 
-## Deonstrating reading from text file:
+## Demonstrating reading from text file:
 
 
 
